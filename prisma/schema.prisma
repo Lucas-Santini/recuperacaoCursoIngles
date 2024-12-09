@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/cursos_ingles"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Curso {
+  id        Int    @id @default(autoincrement())
+  titulo    String
+  descricao String
+  vagas     Int
+}
+
+
